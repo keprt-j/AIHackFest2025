@@ -33,7 +33,7 @@ def upload():
         features = generate_feature_vector(image_path)
 
         load_dotenv()
-        client = MongoClient("mongodb+srv://jj1057:Fo7NByhT@aihackfest2025.pkixofv.mongodb.net/?retryWrites=true&w=majority&appName=AIHackFest2025")
+        client = MongoClient("MONGODB_URI")
         db = client['FaceStorage']
         collection = db['Faces']
 
@@ -111,7 +111,7 @@ def compare():
 @app.route('/names', methods=['GET'])
 def get_names():
     load_dotenv()
-    client = MongoClient("mongodb+srv://jj1057:Fo7NByhT@aihackfest2025.pkixofv.mongodb.net/?retryWrites=true&w=majority&appName=AIHackFest2025")
+    client = MongoClient("MONGODB_URI")
     db = client['FaceStorage']
     collection = db['Faces']
 
