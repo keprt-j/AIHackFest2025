@@ -10,7 +10,6 @@ def extract_facial_features(image_path):
     image = cv2.imread(image_path)
     rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-    # Initialize Mediapipe FaceMesh
     with mp_face_mesh.FaceMesh(static_image_mode=True, max_num_faces=1, refine_landmarks=True) as face_mesh:
         results = face_mesh.process(rgb_image)
 

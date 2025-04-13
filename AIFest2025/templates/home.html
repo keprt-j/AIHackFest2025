@@ -108,5 +108,15 @@
         <div class="detectify2">Detectify</div>
       </div>
     </div>
+    <script>
+      const background = document.querySelector('.background');
+
+      document.addEventListener('mousemove', (e) => {
+          const x = (e.clientX / window.innerWidth) * 100;
+          const y = (e.clientY / window.innerHeight) * 100;
+
+          background.style.transform = `translate(-${x}%, -${y}%)`;
+      });
+    </script>
   </body>
 </html>

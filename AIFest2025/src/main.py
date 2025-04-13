@@ -7,6 +7,7 @@ from pymongo import MongoClient
 import os
 import numpy as np
 import uuid
+from google import genai
 
 app = Flask(__name__, template_folder='../templates', static_folder='../static')
 
@@ -33,7 +34,7 @@ def upload():
         features = generate_feature_vector(image_path)
 
         load_dotenv()
-        client = MongoClient("MONGODB_URI")
+        client = MongoClient("mongodb+srv://jj1057:Fo7NByhT@aihackfest2025.pkixofv.mongodb.net/?retryWrites=true&w=majority&appName=AIHackFest2025")
         db = client['FaceStorage']
         collection = db['Faces']
 
@@ -101,17 +102,12 @@ def compare():
         )
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+    
 
-    # finally:
-    #     if os.path.exists(image1_path):
-    #         os.remove(image1_path)
-    #     if os.path.exists(image2_path):
-    #         os.remove(image2_path)
-
-@app.route('/names', methods=['GET'])
+@app.route('/names', methods=['GET',])
 def get_names():
     load_dotenv()
-    client = MongoClient("MONGODB_URI")
+    client = MongoClient("mongodb+srv://jj1057:Fo7NByhT@aihackfest2025.pkixofv.mongodb.net/?retryWrites=true&w=majority&appName=AIHackFest2025")
     db = client['FaceStorage']
     collection = db['Faces']
 
@@ -159,6 +155,28 @@ def compare_with_name():
 @app.route('/tmp/<filename>')
 def serve_temp_file(filename):
     return send_from_directory('/tmp', filename)
+
+@app.route('/gemini', methods=['POST'])
+def gemini():
+    try:
+        user_question = request.json.get('question', '')
+
+        load_dotenv()
+        gemini_api_key = os.getenv('GEMINI_API_KEY')
+        client = genai.Client(api_key = gemini_api_key)
+
+        # Generate content using the model
+        response = client.models.generate_content(
+            model="gemini-2.0-flash",
+            contents= f"You are an assistant to analyze facial images and provide information on how facial recognition works in the context of this program as a whole. Your question is {user_question}, and you are to stick to topics exclusively related to facial recognition and the program. Please answer the question in a concise manner. The program marks down all important landmarks of the photo and returns a distance attributed to each landmark. You are to sound human, or at least refrain from using remarks that may appear robotic.",
+        )
+
+        ai_response = response.text.strip()
+
+        return jsonify({'response': ai_response})
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)

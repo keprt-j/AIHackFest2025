@@ -3,7 +3,7 @@
 
 /* Global Styles */
 body {
-    font-family: 'Courier', monospace; /* Courier font */
+    font-family: 'Courier', sans-serif; /* Fallback font */
     margin: 0;
     padding: 0;
     background-color: #e6e6fa; /* Light grayish-purple background */
@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #4caf50; /* Light green header */
+    background-color: #2e7d32; /* Light green header */
     color: #ffffff; /* White text */
     padding: 20px 0;
     text-align: center;
@@ -411,4 +411,36 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Flexbox container for Compare and Upload sections */
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Space between the two sections */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Add space between the sections */
+    margin: 20px 0;
+}
+
+.flex-item {
+    flex: 1; /* Allow items to grow and take equal space */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.flex-item h2 {
+    color: #4caf50; /* Light green heading */
+    margin-bottom: 10px;
+}
+
+.flex-item form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 10px; /* Add space between form elements */
+}
+
+.flex-item button {
+    align-self: flex-start; /* Align button to the left */
 }
