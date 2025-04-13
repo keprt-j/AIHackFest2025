@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Feature Comparison</title>
+    <link rel="stylesheet" href="static/styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Facial Feature Comparison</h1>
+    </header>
+    <main>
+        <h2>Compare Two Faces</h2>
+        <form action="/compare" method="POST" enctype="multipart/form-data">
+            <label for="image1">Upload First Image:</label>
+            <input type="file" name="image1" id="image1" required>
+            <label for="image2">Upload Second Image:</label>
+            <input type="file" name="image2" id="image2" required>
+            <button type="submit">Compare</button>
+        </form>
+
+        <h2>Upload a Face</h2>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="name">Enter Name:</label>
+            <input type="text" name="name" id="name" required>
+            <label for="imageU">Upload an Image:</label>
+            <input type="file" name="imageU" id="imageU" required>
+            <button type="submit">Upload</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Detectify</p>
+    </footer>
+</body>
+</html>

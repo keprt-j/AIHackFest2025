@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Upload Result</h1>
+    </header>
+    <main>
+        <h2>Uploaded Image</h2>
+        <div class="container">
+            <div>
+                <h3>Image</h3>
+                <img src="{{ imageU_url }}" alt="Uploaded Image">
+            </div>
+        </div>
+        <h2>Result</h2>
+        <p>The file was uploaded to the database under name: <strong>{{ name }}</strong></p>
+        <a href="/" class="button">Go Home</a>
+    </main>
+    <footer>
+        <p>&copy; 2025 Detectify</p>
+    </footer>
+</body>
+</html>

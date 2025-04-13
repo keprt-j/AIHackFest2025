@@ -1,0 +1,363 @@
+.home,
+.home * {
+  box-sizing: border-box;
+}
+.home {
+  background: #ffffff;
+  height: 1664px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* New styles for the moving background */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #4caf50, #81c784);
+  z-index: -1; /* Place it behind all content */
+  pointer-events: none; /* Prevent interaction with the background */
+}
+
+.background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 80%);
+  mix-blend-mode: overlay;
+}
+
+/* Content styles */
+.content {
+  position: relative;
+  z-index: 1; /* Ensure content is above the background */
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: #388e3c;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2e7d32;
+}
+
+.intro-text {
+  background: #fffcfc;
+  padding: 335px 495px 335px 495px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1526px;
+  height: 830px;
+  position: absolute;
+  left: 0px;
+  top: 71px;
+  overflow: hidden;
+}
+.detectify {
+  color: #000000;
+  text-align: center;
+  font-family: "CourierPrime-Bold", sans-serif;
+  font-size: 72px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  position: relative;
+  width: 500px;
+  height: 109px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.facial-analysis-in-seconds {
+  color: #767676;
+  text-align: center;
+  font-family: "CourierPrime-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  position: relative;
+  align-self: stretch;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-1 {
+  background: rgba(0, 0, 0, 0);
+  width: 642px;
+  height: 642px;
+  position: absolute;
+  left: 1073px;
+  top: 426.63px;
+  transform-origin: 0 0;
+  transform: rotate(-42.367deg) scale(1, 1);
+  aspect-ratio: 1;
+}
+.image-2 {
+  width: 654.64px;
+  height: 654.64px;
+  position: absolute;
+  left: 907px;
+  top: 411.29px;
+  transform-origin: 0 0;
+  transform: rotate(-44.188deg) scale(1, 1);
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+.about {
+  width: 1526px;
+  height: 936px;
+  position: absolute;
+  left: 0px;
+  top: 901px;
+  overflow: hidden;
+}
+.line-1 {
+  margin-top: -3px;
+  border-style: solid;
+  border-color: #1e1e1e;
+  border-width: 3px 0 0 0;
+  width: 636.01px;
+  height: 0px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: 54px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, 1);
+}
+.detectify-quickly-compares-two-faces-to-see-how-similar-they-are-it-helps-with-identity-verification-in-places-like-airports-offices-or-secure-buildings-by-analyzing-facial-features-the-system-gives-a-similarity-score-to-make-the-identification-process-faster-more-accurate-and-more-secure {
+  color: #000000;
+  text-align: left;
+  font-family: "-", sans-serif;
+  font-size: 24px;
+  line-height: 160%;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - 643px);
+  top: calc(50% - 383px);
+  width: 1313px;
+}
+.detectify-quickly-compares-two-faces-to-see-how-similar-they-are-it-helps-with-identity-verification-in-places-like-airports-offices-or-secure-buildings-by-analyzing-facial-features-the-system-gives-a-similarity-score-to-make-the-identification-process-faster-more-accurate-and-more-secure-span {
+  color: #000000;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 160%;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+.detectify-quickly-compares-two-faces-to-see-how-similar-they-are-it-helps-with-identity-verification-in-places-like-airports-offices-or-secure-buildings-by-analyzing-facial-features-the-system-gives-a-similarity-score-to-make-the-identification-process-faster-more-accurate-and-more-secure-span2 {
+  color: #000000;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 24px;
+  line-height: 160%;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+}
+.it-s-arduous-time-consuming-and-inefficient-to-spend-time-looking-at-faces-let-s-cut-to-the-chase-so-you-can-cut-to-yours {
+  color: #000000;
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 24px;
+  line-height: 160%;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - 655px);
+  top: calc(50% - 155px);
+  width: 1313px;
+}
+.footer {
+  width: 1512px;
+  height: 397px;
+  position: absolute;
+  left: 7px;
+  top: 389px;
+  overflow: hidden;
+}
+.footer2 {
+  width: 1512px;
+  height: 373px;
+  position: absolute;
+  left: 0px;
+  top: 24px;
+  overflow: hidden;
+}
+.frame-1 {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 102px;
+  top: 165px;
+}
+.devpost {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+}
+.frame-2 {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 173px;
+  height: 44px;
+  position: absolute;
+  left: 571px;
+  top: 108px;
+}
+.important-links {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 71px;
+  top: 128px;
+}
+.frame-3 {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 331px;
+  top: 165px;
+}
+.https-www-linkedin-com-in-joshua-john-bb-7372284 {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+}
+.line-2 {
+  margin-top: -3px;
+  border-style: solid;
+  border-color: #1e1e1e;
+  border-width: 3px 0 0 0;
+  width: 636.01px;
+  height: 0px;
+  position: absolute;
+  left: calc(50% - 330px);
+  top: 23px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, 1);
+}
+.image {
+  width: 538.1px;
+  height: 538.1px;
+  position: absolute;
+  left: -278px;
+  top: 214.61px;
+  transform-origin: 0 0;
+  transform: rotate(-42.367deg) scale(1, 1);
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+.header {
+  background: #67e069;
+  width: 1526px;
+  height: 102px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+.button {
+  background: #c1eaba;
+  border-radius: var(--var-sds-size-radius-200, 8px);
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  padding: var(--var-sds-size-space-200, 8px);
+  display: flex;
+  flex-direction: row;
+  gap: var(--var-sds-size-space-200, 8px);
+  align-items: center;
+  justify-content: center;
+  width: 83px;
+  position: absolute;
+  left: 1375px;
+  top: 34px;
+  overflow: hidden;
+}
+.button2 {
+  color: #000000;
+  text-align: left;
+  font-family: var(
+    --single-line-body-base-font-family,
+    "Inter-Regular",
+    sans-serif
+  );
+  font-size: var(--single-line-body-base-font-size, 16px);
+  line-height: var(--single-line-body-base-line-height, 100%);
+  font-weight: var(--single-line-body-base-font-weight, 400);
+  text-decoration: underline;
+  position: relative;
+  -webkit-text-stroke: 1px transparent;
+}
+.detectify2 {
+  color: #000000;
+  text-align: center;
+  font-family: "CourierPrime-Bold", sans-serif;
+  font-size: 36px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  position: absolute;
+  left: calc(50% - 756px);
+  top: 50%;
+  translate: 0 -50%;
+  width: 232px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

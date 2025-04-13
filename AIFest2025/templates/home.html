@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/homestyle.css') }}" />
+
+    <style>
+      a,
+      button,
+      input,
+      select,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+        background: none;
+
+        -webkit-font-smoothing: antialiased;
+      }
+
+      menu,
+      ol,
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="home">
+      <div class="intro-text">
+        <div class="detectify">Detectify</div>
+        <div class="facial-analysis-in-seconds">
+          Facial analysis in seconds.
+        </div>
+      </div>
+      <div class="image-1"></div>
+      <img class="image-2" src="{{ url_for('static', filename='img/square.png') }}" />
+      <div class="about">
+        <div class="line-1"></div>
+        <div
+          class="detectify-quickly-compares-two-faces-to-see-how-similar-they-are-it-helps-with-identity-verification-in-places-like-airports-offices-or-secure-buildings-by-analyzing-facial-features-the-system-gives-a-similarity-score-to-make-the-identification-process-faster-more-accurate-and-more-secure"
+        >
+          <span>
+            <span
+              class="detectify-quickly-compares-two-faces-to-see-how-similar-they-are-it-helps-with-identity-verification-in-places-like-airports-offices-or-secure-buildings-by-analyzing-facial-features-the-system-gives-a-similarity-score-to-make-the-identification-process-faster-more-accurate-and-more-secure-span"
+            >
+              Detectify
+            </span>
+            <span
+              class="detectify-quickly-compares-two-faces-to-see-how-similar-they-are-it-helps-with-identity-verification-in-places-like-airports-offices-or-secure-buildings-by-analyzing-facial-features-the-system-gives-a-similarity-score-to-make-the-identification-process-faster-more-accurate-and-more-secure-span2"
+            >
+              quickly compares two faces to see how similar they are. It helps
+              with identity verification in places like airports, offices, or
+              secure buildings. By analyzing facial features, the system gives a
+              similarity score to make the identification process faster, more
+              accurate, and more secure.
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </span>
+          </span>
+        </div>
+        <div
+          class="it-s-arduous-time-consuming-and-inefficient-to-spend-time-looking-at-faces-let-s-cut-to-the-chase-so-you-can-cut-to-yours"
+        >
+        ⚡⚡ It’s arduous, time-consuming, and inefficient to spend time looking at
+          faces. Let’s cut to the chase, so you can cut to yours. ⚡⚡
+        </div>
+        <div class="footer">
+          <div class="footer2">
+            <div class="frame-1">
+              <div class="devpost">
+                <ul class="devpost-span">
+                  <li>Devpost</li>
+                </ul>
+              </div>
+            </div>
+            <div class="frame-2"></div>
+            <div class="important-links">Important Links:</div>
+            <div class="frame-3">
+              <div class="https-www-linkedin-com-in-joshua-john-bb-7372284">
+                https://www.linkedin.com/in/joshua-john-bb7372284/
+              </div>
+            </div>
+            <div class="line-2"></div>
+          </div>
+        </div>
+      </div>
+      <img class="image" src="{{ url_for('static', filename='img/circle.png') }}" />
+      <div class="header">
+        <div class="button">
+          <a href ="/home" class="button1">Start!</a>
+        </div>
+        <div class="detectify2">Detectify</div>
+      </div>
+    </div>
+  </body>
+</html>

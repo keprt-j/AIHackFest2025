@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Space between the images */
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 45%; /* Limit the width of each image to 45% of the container */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Add rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Comparison Result</h1>
+    </header>
+    <main>
+        <h2>Similarity Score: {{ similarity_score }}</h2>
+        <div>
+            <h3>Annotated Images:</h3>
+            <div class="image-container">
+                <img src="{{ image1_url }}" alt="Annotated Image 1">
+                <img src="{{ image2_url }}" alt="Annotated Image 2">
+            </div>
+        </div>
+        <a href="/home" class="button">Go Home</a>
+    </main>
+    <footer>
+        <p>&copy; 2025 Detectify</p>
+    </footer>
+</body>
+</html>
